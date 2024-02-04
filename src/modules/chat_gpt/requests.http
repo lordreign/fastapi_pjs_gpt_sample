@@ -1,0 +1,20 @@
+### chat_gpt chat_completion
+POST http://localhost:8080/chat_gpt/chat_completion
+Content-Type: application/json
+
+{
+    "messages": [
+        {
+            "role": "user",
+            "content": "한국의 위치는 어디인가요?"
+        }
+    ]
+}
+
+### chat_gpt completions
+POST http://localhost:8080/chat_gpt/completions
+Content-Type: application/json
+
+{
+    "prompt": "한국의 위치는 어디인가요?"
+}

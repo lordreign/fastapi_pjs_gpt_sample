@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chat</title>
+</head>
+
+<body>
+    <h1>WebSocket Chat</h1>
+    <!-- https://github.com/websockets/ws#how-to-detect-and-close-broken-connections 참고 -->
+    <form action="" onsubmit="sendMessage(event)">
+        <button onclick="connect(event)">Connect</button>
+        <button onclick="onClose(event)">Close</button>
+        <hr>
+        <label>Message: <input type="text" id="messageText" autocomplete="off" /></label>
+        <button>Send</button>
+    </form>
+    <ul id='messages'>
+    </ul>
+    <script>
+        var ws = null;
+        var messages = [];
+        function connect(event) {
+            ws = new WebSocket("ws://localhost:8080/chat_gpt/chat_completion/ws");
+            ws.onmessage = function (event) {
+                console.log(event);
+                var elMessages = document.getElementById('messages')
+                messages.push(event.data)
+                elMessages.lastChild.innerHTML = messages.join('')
+            };
+            event.preventDefault()
+            console.log(ws);
+        }
+        function sendMessage(event) {
+            event.preventDefault()
+            if (!ws) return;
+
+            var elMessage = document.getElementById('messages')
+            var input = document.getElementById("messageText")
+            elMessage.appendChild(document.createElement('li'))
+            messages = []
+            messages.push(input.value)
+            messages.push(': ')
+
+            ws.send(input.value)
+            input.value = ''
+        }
+
+        function onClose(event) {
+            if (ws) {
+                ws.close()
+                ws = null
+            }
+            event.preventDefault()
+        }
+    </script>
+</body>
+
+</html>

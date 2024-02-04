@@ -1,0 +1,59 @@
+{
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "120"
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintArgs": [
+        "--disable=W0401",
+        "--disable=C0111",
+        "--disable=E0611",
+        "--disable=C0103",
+        "--disable=W0622",
+        "--disable=E0213",
+        "--max-line-length=120"
+    ],
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "ms-python.black-formatter",
+    },
+    "cSpell.ignoreWords": [
+        "CHECKME",
+        "fastapi",
+        "sqlalchemy",
+        "jdbc",
+        "sessionmaker",
+        "autoflush",
+        "pydantic",
+        "mariadbconnector",
+        "dotenv",
+        "onupdate",
+        "Pypi",
+        "linebot",
+        "levelname",
+        "joinedload",
+        "naver",
+        "cralwer",
+        "crawlings",
+        "categoryname",
+        "officename",
+        "officeid",
+        "bindparam",
+        "apscheduler",
+        "jobstores",
+        "lazyload",
+        "SCHD",
+        "virtualenv",
+        "OPENAI",
+        "pyenv"
+    ]
+}

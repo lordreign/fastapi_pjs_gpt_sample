@@ -1,7 +1,8 @@
 # FASTAPI PJS GPT SAMPLE
 > FASTAPI와 OPENAI API를 활용한 Sample 프로젝트 입니다.<br>
 > ORM은 SQLAlchemy를 사용합니다.<br>
-> 파이썬 버전은 3.10.12 기준 입니다.
+> 파이썬 버전은 3.10.12 기준 입니다.<br>
+> ./run.sh로 실행후 test 폴더하위 html로 요청 테스트
 
 ## pyenv와 pyenv-virtualenv 설치 및 적용
 ### 설치(mac 기준)
@@ -37,13 +38,13 @@ $ pyenv versions
 
 ### 프로젝트 환경 설정
 ```
-$ pyenv virtualenv 3.10.12 3.10.12_gpt_api_boiler
-$ pyenv local 3.10.12_gpt_api_boiler
+$ pyenv virtualenv 3.10.12 3.10.12_fastapi_gpt_sample
+$ pyenv local 3.10.12_fastapi_gpt_sample
 ```
 ### vscode 인터프리터 선택
 1. cmd + shift + p(ctrl + shift + p) 키 입력
 2. Python: 인터프리터 선택
-3. 3.10.12_gpt_api_boiler 선택
+3. 3.10.12_fastapi_gpt_sample 선택
 
 ## .env 설정
 1. project root에 .env 파일 생성

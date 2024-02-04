@@ -64,4 +64,4 @@ $ ./run.sh
 ## 사용하는 주요 라이브러리
 * [openai](https://platform.openai.com/docs/introduction/overview)
 * [fastapi](https://fastapi.tiangolo.com/ko/)
-* [sqlalchemy](https://www.sqlalchemy.org/)
+* ~~[sqlalchemy](https://www.sqlalchemy.org/)~~
